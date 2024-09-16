@@ -2,7 +2,7 @@ autoload -Uz promptinit; promptinit
 
 #echo $(id -u)
 
-source ~/.antidote/antidote.zsh
+source /home/ubuntu/.antidote/antidote.zsh
 antidote load /home/ubuntu/.zsh_plugins.txt
 
 if [[ $(id -u) -eq 0 ]]; then
