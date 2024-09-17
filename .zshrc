@@ -1,4 +1,6 @@
-autoload -Uz promptinit; promptinit
+autoload -Uz promptinit > /dev/null 2>&1
+promptinit > /dev/null 2>&1
+
 
 #echo $(id -u)
 
