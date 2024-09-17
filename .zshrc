@@ -1,3 +1,5 @@
+fpath+= ~/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-sindresorhus-SLASH-pure
+
 autoload -Uz promptinit > /dev/null 2>&1
 promptinit > /dev/null 2>&1
 
