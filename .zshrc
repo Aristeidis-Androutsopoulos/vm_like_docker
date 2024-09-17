@@ -1,13 +1,14 @@
+source ~/.antidote/antidote.zsh
+antidote load ~/.zsh_plugins.txt
+
 fpath+= ~/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-sindresorhus-SLASH-pure
 
-autoload -Uz promptinit > /dev/null 2>&1
-promptinit > /dev/null 2>&1
+autoload -Uz promptinit
+promptinit
 
 
 #echo $(id -u)
 
-source ~/.antidote/antidote.zsh
-antidote load ~/.zsh_plugins.txt
 
 if [[ $(id -u) -eq 0 ]]; then
         zstyle :prompt:pure:user:root color red
