@@ -1,7 +1,7 @@
-source ~/.antidote/antidote.zsh
-antidote load ~/.zsh_plugins.txt
+source $HOME/.antidote/antidote.zsh
+antidote load $HOME/.zsh_plugins.txt
 
-fpath+= ~/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-sindresorhus-SLASH-pure
+fpath+= ($HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-sindresorhus-SLASH-pure)
 
 autoload -Uz promptinit
 promptinit
