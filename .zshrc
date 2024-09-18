@@ -20,4 +20,12 @@ zstyle :prompt:pure:host color yellow
 
 export LANG=en_US.UTF-8
 
+# Set up Ctrl + Backspace and Ctrl + Del so you can move around and backspace faster (try it!)
+bindkey '^H' backward-kill-word
+bindkey -M emacs '^[[3;5~' kill-word
+
+# Set up aliases
+# alias cl="clear"
+alias x="exit"
+
 prompt pure
