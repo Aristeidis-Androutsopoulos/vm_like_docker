@@ -18,6 +18,6 @@ fi
 zstyle :prompt:pure:user color blue
 zstyle :prompt:pure:host color yellow
 
-#export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 prompt pure
