@@ -20,7 +20,7 @@ zstyle :prompt:pure:host color yellow
 
 export LANG=en_US.UTF-8
 
-# Set up Ctrl + Backspace and Ctrl + Del so you can move around and backspace faster (try it!)
+# Set up Ctrl + Backspace and Ctrl + Del to delete and backspace + move faster
 bindkey '^H' backward-kill-word
 bindkey -M emacs '^[[3;5~' kill-word
 
