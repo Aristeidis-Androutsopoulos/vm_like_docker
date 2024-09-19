@@ -28,7 +28,8 @@ bindkey -M emacs '^[[3;5~' kill-word
 # Set up aliases
 # alias cl="clear"
 alias x="exit"
+alias hehe="fortune riddles | cowsay -f moose"
 
 prompt pure
 
-fortune riddles | cowsay
+fortune riddles | cowsay -f moose
