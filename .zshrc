@@ -31,4 +31,4 @@ alias x="exit"
 
 prompt pure
 
-fortune | cowsay
+fortune riddles | cowsay
