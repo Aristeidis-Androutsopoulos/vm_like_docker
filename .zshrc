@@ -19,6 +19,7 @@ zstyle :prompt:pure:user color blue
 zstyle :prompt:pure:host color yellow
 
 export LANG=en_US.UTF-8
+export PATH=$PATH:/usr/games
 
 # Set up Ctrl + Backspace and Ctrl + Del to delete and backspace + move faster
 bindkey '^H' backward-kill-word
