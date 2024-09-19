@@ -19,7 +19,7 @@ zstyle :prompt:pure:user color blue
 zstyle :prompt:pure:host color yellow
 
 export LANG=en_US.UTF-8
-export PATH=$PATH:/usr/games
+
 
 # Set up Ctrl + Backspace and Ctrl + Del to delete and backspace + move faster
 bindkey '^H' backward-kill-word
@@ -28,7 +28,7 @@ bindkey -M emacs '^[[3;5~' kill-word
 # Set up aliases
 # alias cl="clear"
 alias x="exit"
-alias hehe="fortune riddles | cowsay -f moose"
+
 
 if command -v lsd
 then
@@ -37,4 +37,9 @@ fi
 
 prompt pure
 
-fortune riddles | cowsay -f moose
+if command -v fortune
+then
+        export PATH=$PATH:/usr/games
+        alias hehe="fortune riddles | cowsay -f moose"
+        fortune riddles | cowsay -f moose
+fi
