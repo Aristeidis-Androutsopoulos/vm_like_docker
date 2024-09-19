@@ -32,7 +32,7 @@ alias hehe="fortune riddles | cowsay -f moose"
 
 if command -v eza
 then
-   alias ls ="eza --icons"
+   alias ls="eza --icons"
 fi
 
 prompt pure
