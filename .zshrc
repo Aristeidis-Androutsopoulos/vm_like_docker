@@ -30,3 +30,5 @@ bindkey -M emacs '^[[3;5~' kill-word
 alias x="exit"
 
 prompt pure
+
+fortune | cowsay
