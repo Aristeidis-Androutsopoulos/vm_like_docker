@@ -30,10 +30,10 @@ bindkey -M emacs '^[[3;5~' kill-word
 alias x="exit"
 alias hehe="fortune riddles | cowsay -f moose"
 
-if command -v eza &> /dev/null
-then
-    alias ls ="eza --icons"
-fi
+#if command -v eza &> /dev/null
+#then
+#    alias ls ="eza --icons"
+#fi
 
 prompt pure
 
