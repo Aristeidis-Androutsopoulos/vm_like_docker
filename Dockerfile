@@ -3,7 +3,8 @@ ENV RUNNING_IN_DOCKER=true
 ARG bells=true \
     whistles=true
 ENV BELLS=${bells} \
-    WHISTLES=${whistles}
+    WHISTLES=${whistles} \
+    BOO=
 
 
 USER root
@@ -12,7 +13,11 @@ USER root
 
 RUN apt-get update -y \
     && apt-get upgrade -y \
-    && apt install -y sudo
+    && apt install -y \
+    sudo \
+    fortune-mod \
+    # fortunes-bofh-excuses \
+    cowsay
 
 WORKDIR /root
 # RUN adduser -D nonroot
@@ -36,6 +41,7 @@ RUN if ${WHISTLES} && ${BELLS}; then \
         apt install -y \
         zsh \
         locales \
+        lsd \
     ;fi
 
 
@@ -91,12 +97,15 @@ RUN if ${WHISTLES} && ${BELLS}; then \
 #                                   clean-ups                                  #
 # ---------------------------------------------------------------------------- #
 USER root
-RUN apt-get clean && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get clean \
+&& apt clean \
+### This removes the apt lists so apt install no longer works
+# && rm -rf /var/lib/apt/lists/* \
+&& rm -rf /tmp/* /var/tmp/*
 # RUN rm -rf /usr/share/doc /usr/share/man /usr/share/info /usr/share/locale/ /var/log/*
-
-
 
 USER ubuntu
 WORKDIR /home/ubuntu
 
-ENTRYPOINT [ "/bin/sh", "-c", "if [ \"$WHISTLES\" = \"true\" ] && [ \"$BELLS\" = \"true\" ]; then exec /bin/zsh; else exec /bin/bash; fi" ]
+ENTRYPOINT [ "/bin/sh", "-c", "$(awk -F: -v user=$(whoami) '$1 == user {print $7}' /etc/passwd)" ]
+# ENTRYPOINT [ "/bin/sh", "-c", "if [ \"$WHISTLES\" = \"true\" ] && [ \"$BELLS\" = \"true\" ]; then exec /bin/zsh; else exec /bin/bash; fi" ]
