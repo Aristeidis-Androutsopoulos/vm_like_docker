@@ -29,6 +29,7 @@ bindkey -M emacs '^[[3;5~' kill-word
 # alias cl="clear"
 alias x="exit"
 alias hehe="fortune riddles | cowsay -f moose"
+alias ls ="eza --icons"
 
 prompt pure
 
