@@ -30,7 +30,7 @@ alias cl="clear"
 alias x="exit"
 
 
-if command -v lsd
+if command -v lsd > /dev/null 2>&1
 then
    alias ls="lsd"
 fi
@@ -39,7 +39,7 @@ prompt pure
 
 
 export PATH=$PATH:/usr/games
-if command -v fortune
+if command -v fortune > /dev/null 2>&1
 then
         alias hehe="fortune riddles | cowsay -f moose"
         fortune riddles | cowsay -f moose
