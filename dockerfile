@@ -3,8 +3,7 @@ ENV RUNNING_IN_DOCKER=true
 ARG bells=true \
     whistles=true
 ENV BELLS=${bells} \
-    WHISTLES=${whistles} \
-    BOO=
+    WHISTLES=${whistles}
 
 
 USER root
