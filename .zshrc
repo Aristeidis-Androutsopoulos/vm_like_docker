@@ -22,11 +22,11 @@ export LANG=en_US.UTF-8
 
 
 # Set up Ctrl + Backspace and Ctrl + Del to delete and backspace + move faster
-bindkey '^H' backward-kill-word
-bindkey -M emacs '^[[3;5~' kill-word
+#bindkey '^H' backward-kill-word
+#bindkey -M emacs '^[[3;5~' kill-word
 
 # Set up aliases
-# alias cl="clear"
+alias cl="clear"
 alias x="exit"
 
 
@@ -37,9 +37,10 @@ fi
 
 prompt pure
 
+
+export PATH=$PATH:/usr/games
 if command -v fortune
 then
-        export PATH=$PATH:/usr/games
         alias hehe="fortune riddles | cowsay -f moose"
         fortune riddles | cowsay -f moose
 fi
